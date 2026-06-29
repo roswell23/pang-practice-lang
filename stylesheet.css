@@ -403,5 +403,89 @@ font-family: 'Montserrat', sans-serif;
 .contact .right form .fields{
     display: flex;
     width: 100%;
-
 }
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+
+.contact .right form .name{
+    margin-right: 10px;
+}
+
+.contact .right .form .email{
+    margin-right: 10px;
+}
+
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+}
+
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus{
+    border-color: red;
+}
+
+.contact .right form .textarea textarea{
+    resize: none;
+    padding: 10px;
+}
+
+.contact .right form .button{
+    height: 50px;
+    width: 180px;
+}
+
+.contact .right form .button button{
+    height: 100%;
+    width: 100%;
+    background: red;
+    border: 2px solid red;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.contact .right form .button button:hover{
+    color: white;
+    border: 2px solid white;
+    background: turquoise;
+}
+
+footer{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 20px;
+}
+
+footer span{
+    color: red;
+    text-decoration: none;
+}
+
+footer span a {
+    color: red;
+}
+
+footer span a:hover{
+    color: rgb(67, 228, 199);
+    text-decoration: none;
+}
+
+
