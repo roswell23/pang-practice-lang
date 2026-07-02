@@ -7,6 +7,11 @@
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 75px; /* height of the sticky navbar */
+}
+
 html, body {
     overflow-x: hidden;
     width: 100%;
@@ -21,11 +26,22 @@ html, body {
 }
 
 .navbar {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
     width: 100%;
     padding: 15px 0px;
     background: turquoise;
     font-family: 'Montserrat', sans-serif;
+}
+
+.navbar.sticky{
+    background: tomato;
+    padding: 15px;
+    top: 0;
+    left: 0;
+    z-index: 9;
 }
 
 .navbar .max-width {
@@ -66,12 +82,17 @@ html, body {
     color: red;
 }
 
+.menu-btn{
+    cursor: pointer;
+
+}
+
 .home {
     display: flex;
     align-items: center;
     background: url('images/banner.jpg') no-repeat center;
     min-height: 100vh;
-    padding: 100px 0;
+    padding: 175px 0 100px 0;
     color: red;
     background-attachment: scroll;
     font-family: 'Montserrat', sans-serif;
@@ -334,6 +355,7 @@ html, body {
 .contact {
     font-family: 'Montserrat', sans-serif;
     display: flex;
+    background: url(images/banner-4.jpg) repeat center;
     align-items: center;
     padding: 80px 0 120px 0;
 }
@@ -503,7 +525,15 @@ footer span a:hover {
     text-decoration: underline;
 }
 
-
+@media(max-width:1920px){
+    .home .max-width{
+        margin-left:0px;
+    }
+    .menu-btn{
+        display: none;
+        z-index: 999;
+    }
+}
 
 @media (max-width: 1104px) {
     .about .about-content .left img {
@@ -519,6 +549,28 @@ footer span a:hover {
 }
 
 @media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 80vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        opacity: 90%;
+        background: black;
+        padding-top: 80px;
+        text-align: center;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px;
+    }
     .home .home-content .text-2{
         font-size: 35px;
     }
@@ -568,6 +620,4 @@ footer span a:hover {
     .contact .right form .email{
         margin: 0;
     }
-
-    
 }
