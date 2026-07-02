@@ -69,9 +69,10 @@ html, body {
 .home {
     display: flex;
     align-items: center;
+    background: url('images/banner.jpg') no-repeat center;
     min-height: 100vh;
     padding: 100px 0;
-    color: #333;
+    color: red;
     background-attachment: scroll;
     font-family: 'Montserrat', sans-serif;
 }
